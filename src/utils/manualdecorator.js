@@ -28,7 +28,7 @@ export default class ManualDecorator {
 	 * @param {Object} config.attributes A set of attributes added to output data when the decorator is active for a specific link.
 	 * Attributes should keep the format of attributes defined in {@link module:engine/view/elementdefinition~ElementDefinition}.
 	 */
-	constructor( { id, label, attributes } ) {
+	constructor( { id, label, attributes, value } ) {
 		/**
 		 * An ID of a manual decorator which is the name of the attribute in the model, for example: 'linkManualDecorator0'.
 		 *
@@ -42,7 +42,7 @@ export default class ManualDecorator {
 		 * @observable
 		 * @member {Boolean} module:link/utils~ManualDecorator#value
 		 */
-		this.set( 'value' );
+		this.set( 'value', value );
 
 		/**
 		 * The label used in the user interface to toggle the manual decorator.
